@@ -1,44 +1,33 @@
 .message {
-
+  word-wrap: break-word;
 }
 
 .HW1 {
   background-color: dodgerblue;
-  width: 300px;
-  height: 70px;
   display: flex;
-  margin-left: 30px;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+  align-items: flex-end;
 }
 
 .photo {
-  width: 60%;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
 }
- .photoDiv {
-  align-self: flex-end;
-  margin-left: 5px;
-  margin-bottom: 5px;
-  width: 30%;
- }
+
 
 .profileInfo {
-  display: flex;
-  justify-content: space-between;
-  background-color: gray;
-  padding-left: 10px;
-  width: 70%;
-  margin: 5px;
   padding: 10px;
-}
 
-.profileInfo p {
-  margin: 0;
+  border-radius: 5px 5px 5px 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.angle {
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 15px, rgba(255, 255, 255, 0.3) 0);
 }
 
 .time {
-  align-self: flex-end;
-  margin: 5px;
-}
+  display: flex;
+  justify-content: flex-end;
+} 

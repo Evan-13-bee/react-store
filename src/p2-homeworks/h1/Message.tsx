@@ -9,13 +9,12 @@ type MessageType = {
 export const Message = (props: MessageType) => {
   return (
     <div className={s.HW1}>
-      <div className={s.photoDiv}>
         <img
           className={s.photo}
           src={props.avatar}
           alt="avatar"
         />
-      </div>
+      <div className={s.angle}/>
       <div className={s.profileInfo}>
         <div>
           <p>{props.name}</p>
