@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import SuperSelect from './common/c5-SuperSelect/SuperSelect'
+import AlternativeSuperRadio from './common/c6-SuperRadio/AlternativeSuperRadio'
 import SuperRadio from './common/c6-SuperRadio/SuperRadio'
 
 const arr = ['x', 'y', 'z']

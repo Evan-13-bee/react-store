@@ -1,0 +1,49 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #091921;
+}
+
+.container label {
+  position: relative;
+}
+.container input {
+  position: relative;
+  appearance: none;
+  cursor: pointer;
+}
+
+.awesomeIcon {
+display: inline-block;
+position: relative;
+width: 40px;
+height: 40px;
+background: #091921;
+line-height: 40px;
+text-align: center;
+margin: 0 4px;
+font-size: 16px;
+color: #6f6f6f;
+border-radius: 50%;
+box-shadow: -1px -1px 3px rgba(255,255,255,0.1), 
+          2px 2px 6px rgba(0,0,0,0.8);
+}
+.awesomeIcon:hover {
+box-shadow: -1px -1px 3px rgba(255,255,255,0.1), 
+            2px 2px 6px rgba(0,0,0,0.8),
+            inset -2px -2px 10px rgba(255,255,255,0.05), 
+            inset 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.container label input:checked ~ .awesomeIcon {
+  color: #00fff1;
+  box-shadow: inset -1px -1px 3px rgba(255,255,255,0.1), 
+              inset 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.container label input:checked ~ .awesomeIcon svg {
+  filter: drop-shadow(0 0 5px #00fff1);
+}

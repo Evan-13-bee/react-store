@@ -1,4 +1,4 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from "react";
+import React, { ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, useState } from "react";
 import s from "./SuperRange.module.css";
 
 // тип пропсов обычного инпута
@@ -14,29 +14,37 @@ const SuperRange: React.FC<SuperRangePropsType> = (
     {
         type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
         onChange, onChangeRange,
-        className,
+        className, value,
 
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
+    // const [value, setValue] = useState(0)
+    // const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
+    //   console.log(e.currentTarget);
+      
+    //   setValue(+e.currentTarget.value)
+    // }
+
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         onChange && onChange(e); // сохраняем старую функциональность
 
         onChangeRange && onChangeRange(+e.currentTarget.value);
     }
-
-    const finalRangeClassName = `${s.range} ${className ? className : ""}`;
-
+    
+    
     return (
-        <>
-            <input
-                type={"range"}
-                onChange={onChangeCallback}
-                className={finalRangeClassName}
-
-                {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
-            />
-        </>
+            <div className={s.rangedDiv}>
+                <span id={s.rangeValue}>{value}</span>
+                <input
+                    className={s.range}
+                    onChange={onChangeCallback}
+                    type="range" name=''
+                    value={value}
+                    min={0} max={1000}
+                    {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+                />
+            </div>
     );
 }
 

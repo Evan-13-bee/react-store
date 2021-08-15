@@ -16,7 +16,7 @@ export const Message = (props: MessageType) => {
         />
       <div className={s.angle}/>
       <div className={s.profileInfo}>
-        <div>
+        <div style={{wordBreak: 'break-word'}}>
           <p>{props.name}</p>
           <p>{props.message}</p>
         </div>

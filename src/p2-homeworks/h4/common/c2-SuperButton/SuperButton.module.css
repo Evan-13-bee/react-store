@@ -1,7 +1,35 @@
-.default {
-
-}
-
-.red {
-    background: red;
-}
+.f {
+    position: relative;
+    display: inline-block;
+    padding: 9px 23px;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.6));
+    border-radius: 40px;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    overflow: hidden;
+    border: none;
+  }
+  .spanni {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 0.4;
+    }
+    100% {
+      width: 500px;
+      height: 500px;
+      opacity: 0;
+    }
+  }

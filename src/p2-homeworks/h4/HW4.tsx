@@ -1,8 +1,8 @@
 import React, {ChangeEvent, useState} from 'react'
 import SuperInputText from './common/c1-SuperInputText/SuperInputText'
 import s from './HW4.module.css'
-import SuperButton from './common/c2-SuperButton/SuperButton'
 import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
+import  SuperButton  from './common/c2-SuperButton/SuperButton'
 
 function HW4() {
     const [text, setText] = useState<string>('')
@@ -30,29 +30,22 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
+                    labelName={'Type text here'}
                     // spanClassName={s.testSpanError}
                 />
 
                 <SuperInputText
                     className={s.blue} // проверьте, рабоет ли смешивание классов
+                    labelName={'Type text here'}
                 />
 
                 {/*----------------------------------------------------*/}
 
-                <SuperButton>
-                    default
-                </SuperButton>
+                <SuperButton/>
 
-                <SuperButton
-                    red // пропсу с булевым значением не обязательно указывать true
-                    onClick={showAlert}
-                >
-                    delete {/*// название кнопки попадёт в children*/}
-                </SuperButton>
+                <SuperButton />
 
-                <SuperButton disabled>
-                    disabled
-                </SuperButton>
+                <SuperButton />
 
                 {/*----------------------------------------------------*/}
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { UserType } from '../../../h3/HW3'
 import {homeWorkReducer} from '../homeWorkReducer'
 
 let initialState: any[] // need to fix any
@@ -18,12 +19,12 @@ test('sort name up', () => {
     const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'up'})
 
     console.log(newState)
-    // expect(...).toBe(...)
+    expect(initialState[1]).toBe(newState[0])
 })
 test('sort name down', () => {
     const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'down'})
 
-
+    expect(initialState[0]).toBe(newState[0])
 })
 test('check age 18', () => {
     const newState = homeWorkReducer(initialState, {type: 'check', payload: 18})
